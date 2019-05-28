@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="70dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <ImageButton
+        android:id="@+id/ic_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:rotation="180"
+        android:tint="@color/colorOnBackground"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:srcCompat="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="چک لیست"
+        android:textColor="@color/colorOnBackground"
+        android:textSize="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ic_save"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:tint="@color/colorOnBackground"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:srcCompat="@drawable/ic_save" />
+
+    <ImageView
+        android:id="@+id/divider_first"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@color/colorPrimaryLight"
+        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_checklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout="@layout/adapter_checklist"
+        app:layout_constraintTop_toBottomOf="@id/divider_first" />
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:cpb_color="@color/colorSecondary"
+        app:cpb_max_sweep_angle="300"
+        app:cpb_min_sweep_angle="10"
+        app:cpb_rotation_speed="1.0"
+        app:cpb_stroke_width="4dp"
+        app:cpb_sweep_speed="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_bar_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_menu"
+        app:shape_roundRect_topLeftRadius="20dp"
+        app:shape_roundRect_topRightRadius="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorPrimaryVariant" />
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            app:shape_roundRect_topLeftRadius="10dp"
+            app:shape_roundRect_topRightRadius="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/colorPrimary" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_damages"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:clickable="true"
+                    android:foregroundGravity="center"
+                    android:background="?selectableItemBackgroundBorderless"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_payment"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_text_damages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.83" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_icon_damages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.93" />
+
+                    <ImageView
+                        android:id="@+id/ic_damages"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:tint="@color/colorOnPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/guideline_icon_damages"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_wrench" />
+
+                    <TextView
+                        android:id="@+id/txt_damages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="خرابی ها"
+                        android:textColor="@color/colorOnPrimary"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/guideline_text_damages"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_about"
+                    app:layout_constraintTop_toBottomOf="@id/layout_damages">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_text_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.83" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_icon_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.93" />
+
+                    <ImageView
+                        android:id="@+id/ic_payment"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:tint="@color/colorOnPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/guideline_icon_payment"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_payment" />
+
+                    <TextView
+                        android:id="@+id/txt_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تراکنش های مالی"
+                        android:textColor="@color/colorOnPrimary"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="@id/ic_payment"
+                        app:layout_constraintRight_toLeftOf="@id/guideline_text_payment"
+                        app:layout_constraintTop_toTopOf="@id/ic_payment" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_bottom"
+                    app:layout_constraintTop_toBottomOf="@id/layout_payment">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_text_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.83" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_icon_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.93" />
+
+                    <ImageView
+                        android:id="@+id/ic_about"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/colorOnPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/guideline_icon_about"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_report" />
+
+                    <TextView
+                        android:id="@+id/txt_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="درباره ما"
+                        android:textColor="@color/colorOnPrimary"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="@id/ic_about"
+                        app:layout_constraintRight_toLeftOf="@id/guideline_text_about"
+                        app:layout_constraintTop_toTopOf="@id/ic_about" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/colorPrimaryVariantTrans"
+                    android:clickable="true"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="1" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.00" />
+
+                    <ImageButton
+                        android:id="@+id/img_btn_close_menu"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:foregroundGravity="center"
+                        android:clickable="true"
+                        android:background="?selectableItemBackgroundBorderless"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_down" />
+
+                    <ImageButton
+                        android:id="@+id/img_btn_exit"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:foregroundGravity="center"
+                        android:clickable="true"
+                        android:background="?selectableItemBackgroundBorderless"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_sign_out" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top|center"
+            android:src="@drawable/menu_logo3" />
+
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

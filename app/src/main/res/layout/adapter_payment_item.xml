@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_description"
+    style="@style/CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginLeft="2dp"
+    app:cardBackgroundColor="@color/colorPrimaryVeryLight"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txt_factor_number_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="شماره فاکتور: "
+            android:textColor="@color/colorOnBackground"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/date"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_factor_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="@color/colorOnBackground"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_factor_number_title"
+            app:layout_constraintRight_toLeftOf="@id/txt_factor_number_title"
+            app:layout_constraintTop_toTopOf="@id/txt_factor_number_title" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/colorSecondary"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_factor_number_title" />
+
+        <TextView
+            android:id="@+id/txt_factor_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/colorOnBackground"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_factor_number_title"
+            app:layout_constraintLeft_toRightOf="@+id/txt_toman"
+            app:layout_constraintTop_toTopOf="@id/txt_factor_number_title" />
+
+        <TextView
+            android:id="@+id/txt_toman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="تومان"
+            android:textColor="@color/colorOnBackground"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_factor_price"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_factor_price"
+            app:layout_constraintTop_toTopOf="@id/txt_factor_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

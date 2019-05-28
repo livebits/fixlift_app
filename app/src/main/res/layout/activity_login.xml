@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/AppTheme.CardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="@id/guideline_top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_top_inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_bottom_inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_left_inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_right_inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_diagonal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <com.github.florent37.shapeofview.shapes.ArcView
+                android:id="@+id/arc"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:elevation="0dp"
+                app:shape_arc_cropDirection="outside"
+                app:shape_arc_height="35dp"
+                app:shape_arc_position="bottom">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary" />
+
+            </com.github.florent37.shapeofview.shapes.ArcView>
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:background="@drawable/login2"
+                app:layout_constraintBottom_toBottomOf="@id/arc"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/arc" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_number"
+                style="@style/AppTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="تلفن همراه"
+                android:focusableInTouchMode="true"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_left_inside"
+                app:layout_constraintRight_toRightOf="@id/guideline_right_inside"
+                app:layout_constraintTop_toBottomOf="@id/guideline_diagonal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                style="@style/AppTheme.Button"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:inputType="number"
+                android:text="ورود"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toTopOf="@id/progress"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_left_inside"
+                app:layout_constraintRight_toRightOf="@id/guideline_right_inside"
+                app:layout_constraintTop_toBottomOf="@id/phone_number" />
+
+            <fr.castorflex.android.circularprogressbar.CircularProgressBar
+                android:id="@+id/progress"
+                android:visibility="invisible"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:indeterminate="true"
+                app:cpb_color="@color/colorSecondary"
+                app:cpb_rotation_speed="1.0"
+                app:cpb_sweep_speed="1.0"
+                app:cpb_stroke_width="4dp"
+                app:cpb_min_sweep_angle="10"
+                app:cpb_max_sweep_angle="300"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_login"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_bottom_inside"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

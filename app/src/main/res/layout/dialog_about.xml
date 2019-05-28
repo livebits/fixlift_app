@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/ic_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:tint="@color/colorOnBackground"
+        android:clickable="true"
+        android:rotation="180"
+        android:elevation="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/login2"/>
+
+    <TextView
+        android:id="@+id/company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="شرکت داده گستر"
+        android:textSize="19dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintRight_toRightOf="@id/logo"
+        app:layout_constraintLeft_toLeftOf="@id/logo"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="شیراز بولوار همت شمالی."
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15sp"
+        android:layout_marginLeft="15sp"
+        android:gravity="center"
+        android:textColor="@color/colorGray"
+        app:layout_constraintTop_toBottomOf="@id/company_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_call"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="تماس با پشتیبانی"
+        app:icon="@drawable/call"
+        app:iconSize="20dp"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address" />
+
+    <ImageView
+        android:id="@+id/divider_first"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:src="@color/colorPrimaryLight"
+        app:layout_constraintTop_toBottomOf="@id/btn_call"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/our_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نوین تک"
+        android:textSize="19dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/divider_first"
+        app:layout_constraintRight_toRightOf="@id/logo"
+        app:layout_constraintLeft_toLeftOf="@id/logo"/>
+
+    <TextView
+        android:id="@+id/version_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نسخه 1.0"
+        android:textSize="13dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorGray"
+        app:layout_constraintTop_toBottomOf="@id/our_name"
+        app:layout_constraintRight_toRightOf="@id/logo"
+        app:layout_constraintLeft_toLeftOf="@id/logo"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="اپلیکیشن FixLift(تعمیر و نگه داری آسانسور) یک پلتفرم برای شرکت های خدمات آسانسور است که با استفاده از آن می توان امور مشتریان و سرویس کاران را به راحتی مدیریت کرد."
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15sp"
+        android:layout_marginLeft="15sp"
+        android:gravity="center"
+        android:textColor="@color/colorGray"
+        app:layout_constraintTop_toBottomOf="@id/version_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

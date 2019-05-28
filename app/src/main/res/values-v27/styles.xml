@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorBackgroundFloating">@color/colorBackground</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="android:fontFamily">@font/iransans</item>
+    </style>
+</resources>

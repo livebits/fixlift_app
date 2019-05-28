@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_headline">24sp</dimen>
+    <!--<dimen title="text_large_title">22sp</dimen>-->
+    <!--<dimen title="text_title">20sp</dimen>-->
+    <!--<dimen title="text_large_body">18sp</dimen>-->
+    <dimen name="text_body">16sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--<dimen title="text_small_body">14sp</dimen>-->
+    <integer name="anim_duration_very_long">1500</integer>
+    <integer name="anim_duration_long">500</integer>
+    <integer name="anim_duration_medium">300</integer>
+</resources>
