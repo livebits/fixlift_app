@@ -15,6 +15,7 @@
     <color name="black">#000000</color>
     <color name="calenderTextColor">#a6a6a7</color>
     <color name="colorGray">#898989</color>
+    <color name="colorLightGray">#e6e6e6</color>
     <color name="white">#ffffff</color>
     <color name="colorPrimaryLight">#cee0ea</color>
     <color name="colorPrimaryVeryLight">#eff3f5</color>
