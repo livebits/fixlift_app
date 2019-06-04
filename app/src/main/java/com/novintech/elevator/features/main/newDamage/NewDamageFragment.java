@@ -103,7 +103,7 @@ public class NewDamageFragment extends BaseDialogFragment implements NewDamageVi
 
     @Override
     protected int getLayout() {
-        return R.layout.activity_new_damage;
+        return R.layout.activity_building_new_damage;
     }
 
     @Override

@@ -146,7 +146,7 @@ public class ServiceDamagesFragment extends BaseFragment implements ServiceDamag
 
     @Override
     protected int getLayout() {
-        return R.layout.activity_service_damages;
+        return R.layout.activity_service_works;
     }
 
     @Override

@@ -33,9 +33,6 @@ import com.novintech.elevator.data.model.response.FactorItem;
 import com.novintech.elevator.data.model.response.Report;
 import com.novintech.elevator.data.model.response.SaveReport;
 import com.novintech.elevator.features.base.BaseFragment;
-import com.novintech.elevator.features.main.MainActivity;
-import com.novintech.elevator.features.main.MainFragmentsCallback;
-import com.novintech.elevator.features.serviceMain.ServiceMainActivity;
 import com.novintech.elevator.features.serviceMain.ServiceMainFragmentsCallback;
 import com.novintech.elevator.util.PersianCalendar;
 
@@ -44,7 +41,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -151,7 +147,7 @@ public class ServiceDamageDetailFragment extends BaseFragment implements DamageD
 
     @Override
     protected int getLayout() {
-        return R.layout.service_damage_datail;
+        return R.layout.activity_service_damage_datail;
     }
 
     @Override
@@ -212,7 +208,7 @@ public class ServiceDamageDetailFragment extends BaseFragment implements DamageD
         dialog.show();
 
         //elements
-        TextInputEditText factorItemName = dialog.findViewById(R.id.factor_item_name);
+        TextInputEditText factorItemName = dialog.findViewById(R.id.spn_item_name);
         TextInputEditText factorItemQty = dialog.findViewById(R.id.factor_item_qty);
         TextInputEditText factorItemUnitPrice = dialog.findViewById(R.id.factor_item_unit_price);
         TextInputEditText factorItemPrice = dialog.findViewById(R.id.factor_item_price);

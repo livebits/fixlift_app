@@ -1,51 +1,15 @@
 package com.novintech.elevator.features.serviceMain;
 
-import android.app.Dialog;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.CheckBox;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.gson.Gson;
-import com.novintech.elevator.ElevatorApplication;
 import com.novintech.elevator.R;
 import com.novintech.elevator.data.DataManager;
-import com.novintech.elevator.data.local.PrefUtil;
-import com.novintech.elevator.data.model.response.Damage;
-import com.novintech.elevator.data.model.response.User;
 import com.novintech.elevator.features.base.BaseActivity;
-import com.novintech.elevator.features.base.BaseFragment;
-import com.novintech.elevator.features.serviceMain.dailySchedule.DailyFragment;
-import com.novintech.elevator.features.serviceMain.serviceDamageDetail.Checklist.ChecklistFragment;
-import com.novintech.elevator.features.serviceMain.serviceDamageDetail.ServiceDamageDetailFragment;
-import com.novintech.elevator.features.serviceMain.serviceDamages.ServiceDamagesFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import butterknife.BindView;
-import butterknife.OnClick;
 
 public class ServiceDashboardActivity extends BaseActivity {
 
@@ -188,7 +152,7 @@ public class ServiceDashboardActivity extends BaseActivity {
 
     @Override
     protected int getLayout() {
-        return R.layout.activity_dashboard_building;
+        return R.layout.dialog_add_factor_item;
     }
 
     @Override

@@ -5,7 +5,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -15,12 +14,10 @@ import android.widget.ImageButton;
 import com.aigestudio.wheelpicker.WheelPicker;
 import com.aigestudio.wheelpicker.widgets.WheelYearPicker;
 import com.google.android.material.chip.Chip;
-import com.google.gson.Gson;
 import com.novintech.elevator.ElevatorApplication;
 import com.novintech.elevator.R;
 import com.novintech.elevator.data.model.response.Damage;
 import com.novintech.elevator.features.base.BaseDialogFragment;
-import com.novintech.elevator.features.main.damages.DamageAdapter;
 import com.novintech.elevator.features.serviceMain.ServiceMainFragmentsCallback;
 import com.novintech.elevator.util.PersianCalendar;
 import com.novintech.elevator.util.RecyclerItemClickListener;
@@ -131,7 +128,7 @@ public class DailyFragment extends BaseDialogFragment implements DailyView {
 
     @Override
     protected int getLayout() {
-        return R.layout.activity_daily;
+        return R.layout.activity_service_daily;
     }
 
     @Override

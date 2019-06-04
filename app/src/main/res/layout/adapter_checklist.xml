@@ -16,11 +16,20 @@
         android:layout_marginBottom="10dp"
         android:padding="10dp">
 
-        <CheckBox
+        <LinearLayout
+            android:id="@+id/layout_text"
+            android:orientation="horizontal"
+            android:layoutDirection="rtl"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/item_text"
@@ -30,9 +39,46 @@
             android:gravity="right"
             android:text=""
             android:textColor="@color/colorOnBackground"
-            android:textSize="17dp"
+            android:textSize="15dp"
+            app:layout_constraintHorizontal_bias="1"
             app:layout_constraintRight_toLeftOf="@+id/checkbox"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/checkbox" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/text_healthy"
+            app:layout_constraintTop_toBottomOf="@+id/layout_text"/>
+
+        <TextView
+            android:id="@+id/text_faulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="خراب"
+            android:textColor="@color/colorOnBackground"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@id/switch_item"
+            app:layout_constraintLeft_toRightOf="@id/switch_item"
+            app:layout_constraintTop_toTopOf="@id/switch_item" />
+
+        <TextView
+            android:id="@+id/text_healthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="سالم"
+            android:textColor="@color/colorOnBackground"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@id/switch_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/switch_item" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

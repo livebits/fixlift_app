@@ -1,7 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryVariant</item>
@@ -13,6 +12,8 @@
 
     <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="cornerRadius">20dp</item>
+        <item name="backgroundTint">@color/colorSecondary</item>
+
     </style>
 
     <style name="AppTheme.CircleButton" parent="Widget.MaterialComponents.Button.Icon">
@@ -23,8 +24,14 @@
         <item name="cardCornerRadius">20dp</item>
     </style>
 
+    <style name="AppTheme.Spin" parent="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        <item name="android:background">@null</item>
+        <item name="boxStrokeColor">@color/colorSecondary</item>
+    </style>
+
     <style name="AppTheme.EditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="boxBackgroundColor">@null</item>
+        <item name="boxStrokeColor">@color/colorSecondary</item>
     </style>
 
     <style name="AppTheme.EditText.Outline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
